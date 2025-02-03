@@ -30,7 +30,7 @@ def func(name, size=6, delay=1):
         time.sleep(delay)
 
 # Define tasks
-tasks = [Agent(func, name="func1", size=10), Agent(func, name="func2")]
+tasks = [Agent(func, name="func1", size=10, _return_name="func1"), Agent(func, name="func2", _return_name="func2")]
 core = Core(list_of_agents=tasks)
 core.set_controller(controller)
 core.run()
@@ -38,7 +38,7 @@ core.run()
 # Pause and resume execution
 time.sleep(3)
 core.pause("event")
-core.add_task(Agent(func, name="func3 added"))
+core.add_task(Agent(func, name="func3 added", _return_name="func3"))
 time.sleep(7)
 core.resume("event")
 ```
