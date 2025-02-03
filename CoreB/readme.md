@@ -1,6 +1,6 @@
 # CoreB
 
-![CoreB Logo](CoreB/img/coreb.pngcoreb.png)
+![CoreB Logo](img/coreb.png)
 
 CoreB is a library for managing concurrent function execution and control in Python applications. This library includes capabilities for managing **ThreadPoolExecutor**, controlling processes with **Controller**, handling function outputs with **Return**, and executing tasks with **Agent**.
 
