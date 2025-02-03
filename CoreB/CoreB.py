@@ -5,6 +5,9 @@ from math import log
 import os
 
 
+# Contact: mmji_programming@proton.me
+#
+#
 # Core execution for concurrently blocking functions
 # TODO: Add log
 # TODO: Logic optimization and implementation
