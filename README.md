@@ -76,6 +76,7 @@ Manages task execution within a processing loop.
 - Optimizing task management logic
 - Implementing better methods for computing the number of **Workers** based on CPU conditions
 - Implementation of a mechanism to detect the end of execution of all cores.
+- Add test
 
 ## License 📜
 This project is released under the **MIT** license. Usage, modification, and distribution are permitted.
