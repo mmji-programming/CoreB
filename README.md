@@ -12,7 +12,7 @@ CoreB is a library for managing concurrent function execution and control in Pyt
 - **Optimized structure for executing tasks in a processing loop** with **Loop**
 
 ## Installation 📦
-Currently, this library can be used independently and does not require specific installation. Just add the **CoreB** file to your project.
+Run the ```pip install -r requirements.txt``` command and add the **CoreB** file to your project.
 
 ## Usage 📖
 ```python
