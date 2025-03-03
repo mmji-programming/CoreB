@@ -574,37 +574,37 @@ class Core:
             self.__terminates[self.__core_name] = True
         
                 
-        executor_object = self.__executors[self.__core_name]
-        threads = executor_object["executor"]._threads
-        
-        # Decrease workers
-        size = executor_object["size"]
-        workers_added = executor_object["workers_added"]
-        
-        # Reset
-        self.__executors[self.__core_name].update({
-            "size": 0,
-            "workers_added": 0,
-            "executor": None
-        })
-        
-        Return._Return__core_done_counter["size"] -= size
-        Return._Return__core_done_counter["workers_added"] -= workers_added
-        Return.returns[self.__core_name]["exec_time"] += self.__cores_time[self.__core_name]["time"].passed()
-        self.__cores_time[self.__core_name]["time"] = Time()
-        
-        
-        ExecutionTrack.events.enqueue(Lable(self, "UPDATE_COUNTERS"))
-        
-        # Stop core
-        for thread in threads:
+            executor_object = self.__executors[self.__core_name]
+            threads = executor_object["executor"]._threads
             
-            _id = thread.native_id # Get thread id
-            result = ctypes.pythonapi.PyThreadState_SetAsyncExc(_id, ctypes.py_object(SystemExit)) # Raise exception
+            # Decrease workers
+            size = executor_object["size"]
+            workers_added = executor_object["workers_added"]
             
-            # Exception raise failure
-            if result > 1:
-                ctypes.pythonapi.PyThreadState_SetAsyncExc(_id, 0)
+            # Reset
+            self.__executors[self.__core_name].update({
+                "size": 0,
+                "workers_added": 0,
+                "executor": None
+            })
+            
+            Return._Return__core_done_counter["size"] -= size
+            Return._Return__core_done_counter["workers_added"] -= workers_added
+            Return.returns[self.__core_name]["exec_time"] += self.__cores_time[self.__core_name]["time"].passed()
+            self.__cores_time[self.__core_name]["time"] = Time()
+            
+            
+            ExecutionTrack.events.enqueue(Lable(self, "UPDATE_COUNTERS"))
+            
+            # Stop core
+            for thread in threads:
+                
+                _id = thread.native_id # Get thread id
+                result = ctypes.pythonapi.PyThreadState_SetAsyncExc(_id, ctypes.py_object(SystemExit)) # Raise exception
+                
+                # Exception raise failure
+                if result > 1:
+                    ctypes.pythonapi.PyThreadState_SetAsyncExc(_id, 0)
 
     @classmethod
     def force_terminate_Core(self) -> None:
