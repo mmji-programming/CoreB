@@ -575,6 +575,7 @@ class Core:
         
                 
             executor_object = self.__executors[self.__core_name]
+            executor_object["executor"].shutdown(wait=False, cancel_futures=True)
             threads = executor_object["executor"]._threads
             
             # Decrease workers
