@@ -71,12 +71,14 @@ Stores the outputs of executed functions in **CoreB**.
 ### 5. `Loop`
 Manages task execution within a processing loop.
 
-## Development and Optimization 🛠️
-- Adding logs for performance analysis
-- Optimizing task management logic
-- Implementing better methods for computing the number of **Workers** based on CPU conditions
-- Implementation of a mechanism to detect the end of execution of all cores.
-- Add test
+## TODO 🛠️
+- [ ] Implementing advanced logging
+- [ ] Implementing better methods for computing the number of **Workers** based on CPU conditions
+- [ ] Add documentation for all classes and methods.
+- [ ] Implement unit tests for core functionalities.
+- [ ] Create examples demonstrating usage of the core.
+- [ ] Optimize performance for large-scale tasks.
+- [ ] Ensure compatibility with projects that have a main loop.
 
 ## License 📜
 This project is released under the **MIT** license. Usage, modification, and distribution are permitted.
