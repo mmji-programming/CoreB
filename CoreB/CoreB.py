@@ -14,8 +14,12 @@ import os
 
 # Contact: mmji-programming@proton.me
 # Core execution for concurrently blocking functions
-# TODO: Logic optimization and implementation
-
+# TODO: Add documentation
+# TODO: Add tests
+# TODO: Add examples
+# TODO: Add more features
+# TODO: Add more optimizations
+# TODO: Add compatibility with projects that have a main loop
 
 
 # Special Errors
