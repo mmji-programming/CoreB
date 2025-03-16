@@ -1,6 +1,6 @@
 # CoreB
 
-![CoreB Logo](img/coreb.png)
+![CoreB Logo](CoreB/img/coreb.png)
 
 CoreB is a library for managing concurrent function execution and control in Python applications. This library includes capabilities for managing **ThreadPoolExecutor**, controlling processes with **Controller**, handling function outputs with **Return**, and executing tasks with **Agent**.
 
@@ -12,7 +12,7 @@ CoreB is a library for managing concurrent function execution and control in Pyt
 - **Optimized structure for executing tasks in a processing loop** with **Loop**
 
 ## Installation 📦
-Currently, this library can be used independently and does not require specific installation. Just add the **CoreB** file to your project.
+Run the ```pip install -r requirements.txt``` command and add the **CoreB** file to your project.
 
 ## Usage 📖
 ```python
@@ -71,15 +71,17 @@ Stores the outputs of executed functions in **CoreB**.
 ### 5. `Loop`
 Manages task execution within a processing loop.
 
-## Development and Optimization 🛠️
-- Adding logs for performance analysis
-- Optimizing task management logic
-- Implementing better methods for computing the number of **Workers** based on CPU conditions
-- Implementation of a mechanism to detect the end of execution of all cores.
+## TODO 🛠️
+- [ ] Implementing advanced logging
+- [ ] Implementing better methods for computing the number of **Workers** based on CPU conditions
+- [ ] Add documentation for all classes and methods.
+- [ ] Implement unit tests for core functionalities.
+- [ ] Create examples demonstrating usage of the core.
+- [ ] Optimize performance for large-scale tasks.
+- [ ] Ensure compatibility with projects that have a main loop.
 
 ## License 📜
 This project is released under the **MIT** license. Usage, modification, and distribution are permitted.
 
 ---
 🚀 **CoreB** is a simple and powerful solution for managing concurrent processing in Python!
-
